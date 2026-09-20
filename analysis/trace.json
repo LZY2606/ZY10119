@@ -1,0 +1,2328 @@
+[
+  {
+    "case": "A1 ascii pure (< TOO_SMALL? no, 65 bytes)",
+    "length": 65,
+    "head_hex": "54686520717569636b2062726f776e20",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "ascii"
+    ],
+    "best": "ascii",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "ascii": [
+          {
+            "len": 65,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "ascii": {
+          "chaos": 0.0,
+          "coherence": 0.0,
+          "language": "English",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "B1 two SBCs decode; coherence differs (cp1252 vs cp1257)",
+    "length": 378,
+    "head_hex": "45737061f16120657320756e207061ed",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252",
+      "cp1257"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "cp1252",
+          "cp1257"
+        ]
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1257": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp1257": {
+          "chaos": 0.0,
+          "coherence": 0.8,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "B2 same input unrestricted (family skip / cap may apply)",
+    "length": 378,
+    "head_hex": "45737061f16120657320756e207061ed",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1250",
+      "cp1252",
+      "iso8859_10",
+      "cp1257",
+      "hp_roman8",
+      "cp857",
+      "cp775",
+      "cp850",
+      "cp852"
+    ],
+    "best": "cp1250",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [
+        "ascii",
+        "cp949",
+        "euc_jis_2004",
+        "euc_jisx0213",
+        "euc_jp",
+        "euc_kr",
+        "gb2312",
+        "hz",
+        "iso2022_jp",
+        "iso2022_jp_1",
+        "iso2022_jp_2",
+        "iso2022_jp_2004",
+        "iso2022_jp_3",
+        "iso2022_jp_ext",
+        "iso2022_kr",
+        "shift_jis",
+        "utf_32_be",
+        "utf_32_le",
+        "utf_8"
+      ],
+      "soft_failed": [
+        "big5",
+        "big5hkscs",
+        "cp037",
+        "cp1006",
+        "cp1125",
+        "cp932",
+        "cp950",
+        "gb18030",
+        "gbk",
+        "johab",
+        "shift_jis_2004",
+        "shift_jisx0213",
+        "utf_16_be",
+        "utf_16_le"
+      ],
+      "chunks_probed": {
+        "ascii": [],
+        "big5": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "big5hkscs": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp932": [
+          {
+            "len": 367,
+            "mess_reported": 0.25,
+            "mess_complete": 0.268,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp950": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "gb18030": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "gbk": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "johab": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.226,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "shift_jis_2004": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "shift_jisx0213": [
+          {
+            "len": 367,
+            "mess_reported": 0.217,
+            "mess_complete": 0.301,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "utf_16_be": [
+          {
+            "len": 189,
+            "mess_reported": 1.486,
+            "mess_complete": 1.457,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "utf_16_le": [
+          {
+            "len": 189,
+            "mess_reported": 2.433,
+            "mess_complete": 1.852,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "cp037": [
+          {
+            "len": 378,
+            "mess_reported": 4.312,
+            "mess_complete": 4.754,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1006": [
+          {
+            "len": 378,
+            "mess_reported": 0.25,
+            "mess_complete": 0.935,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1125": [
+          {
+            "len": 378,
+            "mess_reported": 0.25,
+            "mess_complete": 0.116,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "cp1250": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1252": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1254": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1257": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1258": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp775": [
+          {
+            "len": 378,
+            "mess_reported": 0.09,
+            "mess_complete": 0.09,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp850": [
+          {
+            "len": 378,
+            "mess_reported": 0.101,
+            "mess_complete": 0.101,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp852": [
+          {
+            "len": 378,
+            "mess_reported": 0.101,
+            "mess_complete": 0.101,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp857": [
+          {
+            "len": 378,
+            "mess_reported": 0.079,
+            "mess_complete": 0.079,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp858": [
+          {
+            "len": 378,
+            "mess_reported": 0.101,
+            "mess_complete": 0.101,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "hp_roman8": [
+          {
+            "len": 378,
+            "mess_reported": 0.042,
+            "mess_complete": 0.042,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_10": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_13": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_14": [
+          {
+            "len": 378,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1250": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp1252": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [
+            "cp1254",
+            "cp1258",
+            "iso8859_14"
+          ]
+        },
+        "cp1254": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "cp1258": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "iso8859_14": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "iso8859_10": {
+          "chaos": 0.0,
+          "coherence": 0.84,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp1257": {
+          "chaos": 0.0,
+          "coherence": 0.8,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [
+            "iso8859_13"
+          ]
+        },
+        "iso8859_13": {
+          "chaos": 0.0,
+          "coherence": 0.8,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1257"
+        },
+        "hp_roman8": {
+          "chaos": 0.042,
+          "coherence": 0.8,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp857": {
+          "chaos": 0.079,
+          "coherence": 0.8333,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp775": {
+          "chaos": 0.09,
+          "coherence": 0.8333,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "cp850": {
+          "chaos": 0.101,
+          "coherence": 0.8333,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [
+            "cp858"
+          ]
+        },
+        "cp858": {
+          "chaos": 0.101,
+          "coherence": 0.8333,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp850"
+        },
+        "cp852": {
+          "chaos": 0.101,
+          "coherence": 0.8333,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "C1 utf-8 BOM",
+    "length": 32,
+    "head_hex": "efbbbf636166c3a92072c3a973756dc3",
+    "bom_sig": {
+      "encoding": "utf_8",
+      "mark_hex": "efbbbf",
+      "stripped_when_strip_is_applied": true
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "utf_8"
+    ],
+    "best": "utf_8",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "utf_8": [
+          {
+            "len": 24,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "utf_8": {
+          "chaos": 0.0,
+          "coherence": 0.0,
+          "language": "Unknown",
+          "bom": true,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "C2 utf-16-be BOM",
+    "length": 32,
+    "head_hex": "feff00480065006c006c006f00200042",
+    "bom_sig": {
+      "encoding": "utf_16",
+      "mark_hex": "feff",
+      "stripped_when_strip_is_applied": false
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "utf_16"
+    ],
+    "best": "utf_16",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "utf_16": [
+          {
+            "len": 15,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "utf_16": {
+          "chaos": 0.0,
+          "coherence": 0.0,
+          "language": "Unknown",
+          "bom": true,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "C3 embedded declaration iso-8859-5",
+    "length": 98,
+    "head_hex": "3c3f786d6c2076657273696f6e3d2231",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": "iso8859_5",
+    "final_order": [
+      "iso8859_5"
+    ],
+    "best": "iso8859_5",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "iso8859_5": [
+          {
+            "len": 98,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "iso8859_5": {
+          "chaos": 0.0,
+          "coherence": 0.625,
+          "language": "Ukrainian",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "D1 chunk-level early exit, latin_1 soft-fails",
+    "length": 3000,
+    "head_hex": "4d6f6c69e8726520657420526163696e",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "latin_1",
+          "cp1252"
+        ]
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [
+        "latin_1"
+      ],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "latin_1": [
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.625,
+            "mess_complete": 0.078,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.625,
+            "mess_complete": 0.078,
+            "stopped_inside_chunk": true
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0,
+          "coherence": 0.6857,
+          "language": "Romanian",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "D2 intra-chunk PARTIAL values survive and enter sort (threshold=0.2)",
+    "length": 3000,
+    "head_hex": "61806180618020657320756e207061ed",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252",
+      "latin_1"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "latin_1",
+          "cp1252"
+        ]
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 512,
+            "mess_reported": 0.279,
+            "mess_complete": 0.034,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "latin_1": [
+          {
+            "len": 512,
+            "mess_reported": 0.375,
+            "mess_complete": 0.047,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0558,
+          "coherence": 0.776,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "latin_1": {
+          "chaos": 0.075,
+          "coherence": 0.776,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "D3 SAME bytes, threshold=0.35: partial value SURVIVES and enters sort",
+    "length": 3000,
+    "head_hex": "61806180618020657320756e207061ed",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252",
+      "latin_1"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "latin_1",
+          "cp1252"
+        ],
+        "threshold": 0.35
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 512,
+            "mess_reported": 0.034,
+            "mess_complete": 0.034,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "latin_1": [
+          {
+            "len": 512,
+            "mess_reported": 0.375,
+            "mess_complete": 0.047,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0068000000000000005,
+          "coherence": 0.776,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        },
+        "latin_1": {
+          "chaos": 0.075,
+          "coherence": 0.776,
+          "language": "Spanish",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "E1 identical decoded payload -> fingerprint dedup",
+    "length": 326,
+    "head_hex": "4c61204672616e63652065737420756e",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "cp1252",
+          "latin_1",
+          "iso8859_15",
+          "cp1254",
+          "cp1258",
+          "iso8859_9"
+        ]
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1254": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1258": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_15": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_9": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "latin_1": [
+          {
+            "len": 326,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [
+            "cp1254",
+            "cp1258",
+            "iso8859_15",
+            "iso8859_9",
+            "latin_1"
+          ]
+        },
+        "cp1254": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "cp1258": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "iso8859_15": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "iso8859_9": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        },
+        "latin_1": {
+          "chaos": 0.0,
+          "coherence": 0.92,
+          "language": "French",
+          "bom": false,
+          "submatches": [],
+          "deduped_into": "cp1252"
+        }
+      }
+    }
+  },
+  {
+    "case": "F1 utf-8 soft failure -> fallback chaos=threshold",
+    "length": 3840,
+    "head_hex": "e29480e29481e29482e29483e29484e2",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "utf_8"
+    ],
+    "best": "utf_8",
+    "trace": {
+      "kwargs": {},
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [
+        "ascii",
+        "big5",
+        "big5hkscs",
+        "cp1250",
+        "cp1251",
+        "cp1252",
+        "cp1253",
+        "cp1254",
+        "cp1255",
+        "cp1257",
+        "cp1258",
+        "cp424",
+        "cp856",
+        "cp864",
+        "cp869",
+        "cp874",
+        "cp932",
+        "cp949",
+        "cp950",
+        "euc_jis_2004",
+        "euc_jisx0213",
+        "euc_jp",
+        "euc_kr",
+        "gb18030",
+        "gb2312",
+        "gbk",
+        "hz",
+        "iso2022_jp",
+        "iso2022_jp_1",
+        "iso2022_jp_2",
+        "iso2022_jp_2004",
+        "iso2022_jp_3",
+        "iso2022_jp_ext",
+        "iso2022_kr",
+        "iso8859_6",
+        "iso8859_7",
+        "iso8859_8",
+        "johab",
+        "koi8_t",
+        "kz1048",
+        "shift_jis",
+        "shift_jis_2004",
+        "shift_jisx0213",
+        "utf_32_be",
+        "utf_32_le"
+      ],
+      "soft_failed": [
+        "cp037",
+        "cp1006",
+        "cp1125",
+        "cp1256",
+        "cp437",
+        "cp720",
+        "cp737",
+        "cp775",
+        "cp852",
+        "cp855",
+        "cp857",
+        "cp875",
+        "hp_roman8",
+        "iso8859_10",
+        "iso8859_11",
+        "iso8859_13",
+        "iso8859_16",
+        "iso8859_5",
+        "koi8_r",
+        "koi8_u",
+        "mac_cyrillic",
+        "mac_greek",
+        "mac_iceland",
+        "mac_latin2",
+        "ptcp154",
+        "utf_16_be",
+        "utf_16_le",
+        "utf_8"
+      ],
+      "chunks_probed": {
+        "ascii": [],
+        "utf_8": [
+          {
+            "len": 170,
+            "mess_reported": 2.0,
+            "mess_complete": 2.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 170,
+            "mess_reported": 2.0,
+            "mess_complete": 2.0,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "utf_16_be": [
+          {
+            "len": 256,
+            "mess_reported": 2.95,
+            "mess_complete": 4.274,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 256,
+            "mess_reported": 2.95,
+            "mess_complete": 4.274,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "utf_16_le": [
+          {
+            "len": 256,
+            "mess_reported": 2.95,
+            "mess_complete": 4.244,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 256,
+            "mess_reported": 2.95,
+            "mess_complete": 4.244,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp037": [
+          {
+            "len": 512,
+            "mess_reported": 0.406,
+            "mess_complete": 1.339,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.406,
+            "mess_complete": 1.339,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1006": [
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 5.021,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 5.021,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "cp1125": [
+          {
+            "len": 512,
+            "mess_reported": 0.323,
+            "mess_complete": 1.25,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.323,
+            "mess_complete": 1.25,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1250": [],
+        "cp1251": [],
+        "cp1252": [],
+        "cp1253": [],
+        "cp1254": [],
+        "cp1255": [],
+        "cp1256": [
+          {
+            "len": 512,
+            "mess_reported": 3.027,
+            "mess_complete": 3.501,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 3.027,
+            "mess_complete": 3.501,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp1257": [],
+        "cp1258": [],
+        "cp424": [],
+        "cp437": [
+          {
+            "len": 512,
+            "mess_reported": 2.08,
+            "mess_complete": 3.8,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 2.08,
+            "mess_complete": 3.8,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp720": [
+          {
+            "len": 512,
+            "mess_reported": 4.05,
+            "mess_complete": 3.974,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 4.05,
+            "mess_complete": 3.974,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "cp737": [
+          {
+            "len": 512,
+            "mess_reported": 0.323,
+            "mess_complete": 1.25,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.323,
+            "mess_complete": 1.25,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp775": [
+          {
+            "len": 512,
+            "mess_reported": 1.203,
+            "mess_complete": 2.83,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.203,
+            "mess_complete": 2.83,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp852": [
+          {
+            "len": 512,
+            "mess_reported": 1.203,
+            "mess_complete": 2.217,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.203,
+            "mess_complete": 2.217,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp855": [
+          {
+            "len": 512,
+            "mess_reported": 1.215,
+            "mess_complete": 1.172,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.215,
+            "mess_complete": 1.172,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "cp856": [],
+        "cp857": [
+          {
+            "len": 512,
+            "mess_reported": 1.141,
+            "mess_complete": 2.439,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.141,
+            "mess_complete": 2.439,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "cp864": [],
+        "cp869": [],
+        "cp874": [],
+        "cp875": [
+          {
+            "len": 512,
+            "mess_reported": 0.906,
+            "mess_complete": 2.21,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.906,
+            "mess_complete": 2.21,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "hp_roman8": [
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 7.365,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 7.365,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "iso8859_10": [
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 6.988,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 6.988,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "iso8859_11": [
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 4.117,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 4.117,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "iso8859_13": [
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 8.116,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 8.116,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "iso8859_16": [
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 7.154,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 8.034,
+            "mess_complete": 7.154,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "iso8859_5": [
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 5.044,
+            "stopped_inside_chunk": true
+          },
+          {
+            "len": 512,
+            "mess_reported": 5.125,
+            "mess_complete": 5.044,
+            "stopped_inside_chunk": true
+          }
+        ],
+        "iso8859_6": [],
+        "iso8859_7": [],
+        "iso8859_8": [],
+        "koi8_r": [
+          {
+            "len": 512,
+            "mess_reported": 3.219,
+            "mess_complete": 4.204,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 3.219,
+            "mess_complete": 4.204,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "koi8_t": [],
+        "koi8_u": [
+          {
+            "len": 512,
+            "mess_reported": 3.219,
+            "mess_complete": 4.055,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 3.219,
+            "mess_complete": 4.055,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "kz1048": [],
+        "mac_cyrillic": [
+          {
+            "len": 512,
+            "mess_reported": 1.121,
+            "mess_complete": 1.218,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.121,
+            "mess_complete": 1.218,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "mac_greek": [
+          {
+            "len": 512,
+            "mess_reported": 2.543,
+            "mess_complete": 4.01,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 2.543,
+            "mess_complete": 4.01,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "mac_iceland": [
+          {
+            "len": 512,
+            "mess_reported": 1.582,
+            "mess_complete": 2.37,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 1.582,
+            "mess_complete": 2.37,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "mac_latin2": [
+          {
+            "len": 512,
+            "mess_reported": 2.058,
+            "mess_complete": 2.265,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 2.058,
+            "mess_complete": 2.265,
+            "stopped_inside_chunk": false
+          }
+        ],
+        "ptcp154": [
+          {
+            "len": 512,
+            "mess_reported": 0.406,
+            "mess_complete": 0.491,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.406,
+            "mess_complete": 0.491,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "utf_8": {
+          "chaos": 0.2,
+          "coherence": 0.0,
+          "language": "Unknown",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "F2 huge payload (>= 10e6): lazy decode + 5 chunks only",
+    "length": 11000000,
+    "head_hex": "4d6f6c69e8726520657420526163696e",
+    "bom_sig": {
+      "encoding": null,
+      "mark_hex": "",
+      "stripped_when_strip_is_applied": null
+    },
+    "declarative_hint": null,
+    "final_order": [
+      "cp1252"
+    ],
+    "best": "cp1252",
+    "trace": {
+      "kwargs": {
+        "cp_isolation": [
+          "cp1252"
+        ]
+      },
+      "length_bands": {
+        "too_small_below": 32,
+        "too_big_at_or_above": 10000000
+      },
+      "hard_failed": [],
+      "soft_failed": [],
+      "chunks_probed": {
+        "cp1252": [
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          },
+          {
+            "len": 512,
+            "mess_reported": 0.0,
+            "mess_complete": 0.0,
+            "stopped_inside_chunk": false
+          }
+        ]
+      },
+      "candidates_and_submatches": {
+        "cp1252": {
+          "chaos": 0.0,
+          "coherence": 0.6857,
+          "language": "Romanian",
+          "bom": false,
+          "submatches": []
+        }
+      }
+    }
+  },
+  {
+    "case": "G1 single-chunk merge (steps=1, spanish cp1252)",
+    "per_chunk": [
+      [
+        [
+          "Spanish",
+          0.84
+        ],
+        [
+          "Portuguese",
+          0.72
+        ],
+        [
+          "French",
+          0.6
+        ],
+        [
+          "Italian",
+          0.6
+        ],
+        [
+          "Turkish",
+          0.52
+        ],
+        [
+          "Romanian",
+          0.52
+        ],
+        [
+          "Hungarian",
+          0.48
+        ],
+        [
+          "Czech",
+          0.48
+        ],
+        [
+          "Estonian",
+          0.48
+        ],
+        [
+          "Slovak",
+          0.44
+        ],
+        [
+          "Finnish",
+          0.44
+        ],
+        [
+          "German",
+          0.44
+        ],
+        [
+          "Croatian",
+          0.44
+        ],
+        [
+          "Polish",
+          0.44
+        ],
+        [
+          "Swedish",
+          0.4
+        ],
+        [
+          "Norwegian",
+          0.4
+        ],
+        [
+          "Dutch",
+          0.36
+        ],
+        [
+          "Danish",
+          0.32
+        ],
+        [
+          "Vietnamese",
+          0.2
+        ]
+      ]
+    ],
+    "merged": [
+      [
+        "Spanish",
+        0.84
+      ],
+      [
+        "Portuguese",
+        0.72
+      ],
+      [
+        "French",
+        0.6
+      ],
+      [
+        "Italian",
+        0.6
+      ],
+      [
+        "Turkish",
+        0.52
+      ],
+      [
+        "Romanian",
+        0.52
+      ],
+      [
+        "Hungarian",
+        0.48
+      ],
+      [
+        "Czech",
+        0.48
+      ],
+      [
+        "Estonian",
+        0.48
+      ],
+      [
+        "Slovak",
+        0.44
+      ],
+      [
+        "Finnish",
+        0.44
+      ],
+      [
+        "German",
+        0.44
+      ],
+      [
+        "Croatian",
+        0.44
+      ],
+      [
+        "Polish",
+        0.44
+      ],
+      [
+        "Swedish",
+        0.4
+      ],
+      [
+        "Norwegian",
+        0.4
+      ],
+      [
+        "Dutch",
+        0.36
+      ],
+      [
+        "Danish",
+        0.32
+      ],
+      [
+        "Vietnamese",
+        0.2
+      ]
+    ]
+  },
+  {
+    "case": "G2 five-chunk merge, arithmetic mean per language (spanish cp1252)",
+    "per_chunk": [
+      [
+        [
+          "Spanish",
+          0.72
+        ],
+        [
+          "Portuguese",
+          0.64
+        ],
+        [
+          "French",
+          0.64
+        ],
+        [
+          "Italian",
+          0.6
+        ],
+        [
+          "Romanian",
+          0.56
+        ],
+        [
+          "Croatian",
+          0.52
+        ],
+        [
+          "Slovak",
+          0.48
+        ],
+        [
+          "Turkish",
+          0.48
+        ],
+        [
+          "Polish",
+          0.48
+        ],
+        [
+          "Hungarian",
+          0.44
+        ],
+        [
+          "Finnish",
+          0.44
+        ],
+        [
+          "Estonian",
+          0.44
+        ],
+        [
+          "German",
+          0.44
+        ],
+        [
+          "Czech",
+          0.4
+        ],
+        [
+          "Swedish",
+          0.4
+        ],
+        [
+          "Norwegian",
+          0.4
+        ],
+        [
+          "Dutch",
+          0.36
+        ],
+        [
+          "Danish",
+          0.36
+        ],
+        [
+          "Vietnamese",
+          0.24
+        ]
+      ],
+      [
+        [
+          "Spanish",
+          0.8
+        ],
+        [
+          "Portuguese",
+          0.76
+        ],
+        [
+          "French",
+          0.64
+        ],
+        [
+          "Italian",
+          0.6
+        ],
+        [
+          "Czech",
+          0.56
+        ],
+        [
+          "Hungarian",
+          0.52
+        ],
+        [
+          "Turkish",
+          0.52
+        ],
+        [
+          "Romanian",
+          0.52
+        ],
+        [
+          "Finnish",
+          0.48
+        ],
+        [
+          "Estonian",
+          0.48
+        ],
+        [
+          "Slovak",
+          0.44
+        ],
+        [
+          "Croatian",
+          0.44
+        ],
+        [
+          "Polish",
+          0.44
+        ],
+        [
+          "Dutch",
+          0.4
+        ],
+        [
+          "Norwegian",
+          0.4
+        ],
+        [
+          "Swedish",
+          0.32
+        ],
+        [
+          "Danish",
+          0.32
+        ],
+        [
+          "German",
+          0.32
+        ],
+        [
+          "Vietnamese",
+          0.28
+        ]
+      ],
+      [
+        [
+          "Spanish",
+          0.8
+        ],
+        [
+          "Portuguese",
+          0.72
+        ],
+        [
+          "French",
+          0.64
+        ],
+        [
+          "Italian",
+          0.64
+        ],
+        [
+          "Romanian",
+          0.56
+        ],
+        [
+          "Turkish",
+          0.52
+        ],
+        [
+          "Hungarian",
+          0.48
+        ],
+        [
+          "Czech",
+          0.48
+        ],
+        [
+          "Slovak",
+          0.48
+        ],
+        [
+          "Swedish",
+          0.48
+        ],
+        [
+          "Norwegian",
+          0.48
+        ],
+        [
+          "Estonian",
+          0.44
+        ],
+        [
+          "German",
+          0.44
+        ],
+        [
+          "Croatian",
+          0.44
+        ],
+        [
+          "Polish",
+          0.44
+        ],
+        [
+          "Dutch",
+          0.36
+        ],
+        [
+          "Finnish",
+          0.36
+        ],
+        [
+          "Danish",
+          0.36
+        ],
+        [
+          "Vietnamese",
+          0.16
+        ]
+      ],
+      [
+        [
+          "Spanish",
+          0.72
+        ],
+        [
+          "Portuguese",
+          0.72
+        ],
+        [
+          "Italian",
+          0.64
+        ],
+        [
+          "French",
+          0.6
+        ],
+        [
+          "Hungarian",
+          0.52
+        ],
+        [
+          "Czech",
+          0.52
+        ],
+        [
+          "Slovak",
+          0.52
+        ],
+        [
+          "Estonian",
+          0.48
+        ],
+        [
+          "Turkish",
+          0.48
+        ],
+        [
+          "Croatian",
+          0.48
+        ],
+        [
+          "Finnish",
+          0.44
+        ],
+        [
+          "Romanian",
+          0.44
+        ],
+        [
+          "Polish",
+          0.44
+        ],
+        [
+          "Dutch",
+          0.4
+        ],
+        [
+          "Norwegian",
+          0.4
+        ],
+        [
+          "German",
+          0.4
+        ],
+        [
+          "Swedish",
+          0.36
+        ],
+        [
+          "Danish",
+          0.36
+        ],
+        [
+          "Vietnamese",
+          0.24
+        ]
+      ],
+      [
+        [
+          "Spanish",
+          0.84
+        ],
+        [
+          "Portuguese",
+          0.76
+        ],
+        [
+          "French",
+          0.68
+        ],
+        [
+          "Italian",
+          0.68
+        ],
+        [
+          "Romanian",
+          0.6
+        ],
+        [
+          "Czech",
+          0.56
+        ],
+        [
+          "Hungarian",
+          0.52
+        ],
+        [
+          "Estonian",
+          0.52
+        ],
+        [
+          "Turkish",
+          0.52
+        ],
+        [
+          "Swedish",
+          0.48
+        ],
+        [
+          "German",
+          0.48
+        ],
+        [
+          "Croatian",
+          0.48
+        ],
+        [
+          "Polish",
+          0.44
+        ],
+        [
+          "Slovak",
+          0.4
+        ],
+        [
+          "Norwegian",
+          0.4
+        ],
+        [
+          "Finnish",
+          0.4
+        ],
+        [
+          "Dutch",
+          0.36
+        ],
+        [
+          "Danish",
+          0.36
+        ],
+        [
+          "Vietnamese",
+          0.24
+        ]
+      ]
+    ],
+    "merged": [
+      [
+        "Spanish",
+        0.776
+      ],
+      [
+        "Portuguese",
+        0.72
+      ],
+      [
+        "French",
+        0.64
+      ],
+      [
+        "Italian",
+        0.632
+      ],
+      [
+        "Romanian",
+        0.536
+      ],
+      [
+        "Turkish",
+        0.504
+      ],
+      [
+        "Czech",
+        0.504
+      ],
+      [
+        "Hungarian",
+        0.496
+      ],
+      [
+        "Croatian",
+        0.472
+      ],
+      [
+        "Estonian",
+        0.472
+      ],
+      [
+        "Slovak",
+        0.464
+      ],
+      [
+        "Polish",
+        0.448
+      ],
+      [
+        "Finnish",
+        0.424
+      ],
+      [
+        "German",
+        0.416
+      ],
+      [
+        "Norwegian",
+        0.416
+      ],
+      [
+        "Swedish",
+        0.408
+      ],
+      [
+        "Dutch",
+        0.376
+      ],
+      [
+        "Danish",
+        0.352
+      ],
+      [
+        "Vietnamese",
+        0.232
+      ]
+    ]
+  }
+]
